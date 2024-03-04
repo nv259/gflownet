@@ -89,7 +89,7 @@ class Config:
     device: str = "cuda"
     seed: int = 0
     validate_every: int = 1000
-    checkpoint_every: Optional[int] = None
+    checkpoint_every: Optional[int] = 100
     store_all_checkpoints: bool = False
     print_every: int = 100
     start_at_step: int = 0
