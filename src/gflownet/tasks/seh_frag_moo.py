@@ -381,7 +381,7 @@ def main():
     config.log_dir = "./logs/debug_run_sfm"
     config.device = "cuda" if torch.cuda.is_available() else "cpu"
     config.print_every = 1
-    config.validate_every = 1
+    config.validate_every = 10
     config.num_final_gen_steps = 5
     config.num_training_steps = 3
     config.pickle_mp_messages = True
