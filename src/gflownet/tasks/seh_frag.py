@@ -138,7 +138,7 @@ class SEHFragTrainer(StandardOnlineTrainer):
     def set_default_hps(self, cfg: Config):
         cfg.hostname = socket.gethostname()
         cfg.pickle_mp_messages = False
-        cfg.num_workers = 8
+        cfg.num_workers = 4
         cfg.opt.learning_rate = 1e-4
         cfg.opt.weight_decay = 1e-8
         cfg.opt.momentum = 0.9
@@ -205,7 +205,7 @@ def main():
     config.device = "cuda" if torch.cuda.is_available() else "cpu"
     config.overwrite_existing_exp = True
     config.num_training_steps = 10_000
-    config.num_workers = 8
+    config.num_workers = 4
     config.opt.lr_decay = 20_000
     config.algo.sampling_tau = 0.99
     config.algo.offline_ratio = 0.0
