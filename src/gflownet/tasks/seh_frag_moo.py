@@ -380,10 +380,10 @@ def main():
     config.desc = "debug_seh_frag_moo"
     config.log_dir = "./logs/debug_run_sfm"
     config.device = "cuda" if torch.cuda.is_available() else "cpu"
-    config.print_every = 1
-    config.validate_every = 10
+    config.print_every = 100
+    config.validate_every = 1000
     config.num_final_gen_steps = 5
-    config.num_training_steps = 10000
+    config.num_training_steps = 20000
     config.pickle_mp_messages = True
     config.overwrite_existing_exp = True
     config.algo.sampling_tau = 0.95
